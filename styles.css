@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #e54a35;
+    --text-color: #081b33;
+    --background-color: #f2f2f2;
+    --font-primary: 'Calluna', sans-serif;
+    --font-secondary: 'Paratype Futura Pt', sans-serif;
+}
+
+.site-body {
+    background-color: var(--background-color);
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-header, .site-footer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-button {
+    display: none; /* Hide by default */
+    align-items: center;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+}
+
+.email-link, .site-title-link {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-link, .footer-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.intro-section, .writing-section {
+    margin-bottom: 40px;
+}
+
+.intro-text, .writing-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content-divider {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #bbb;
+    margin: 40px 0;
+}
+
+.footer-navigation {
+    text-align: center;
+}
+
+.contact-email {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+/* Media Query to show hamburger menu on small screens */
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex; /* Show the menu button on small screens */
+    }
+
+    .navigation-menu {
+        display: none; /* Hide the navigation links on small screens */
+    }
+}
+
