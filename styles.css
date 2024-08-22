@@ -1,9 +1,35 @@
+/* Include Calluna Regular Font */
+@font-face {
+    font-family: 'Calluna';
+    src: url('./fonts/Calluna-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Include Calluna Semibold Font */
+@font-face {
+    font-family: 'Calluna Semibold';
+    src: url('./fonts/Calluna-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Include ParaType Futura PT Medium Font */
+@font-face {
+    font-family: 'Futura PT Medium';
+    src: url('./fonts/ParaType-Futura-PT-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 :root {
     --primary-color: #e54a35;
     --text-color: #081b33;
     --background-color: #f2f2f2;
     --font-primary: 'Calluna', sans-serif;
-    --font-secondary: 'Paratype Futura Pt', sans-serif;
+    --font-semibold: 'Calluna Semibold', sans-serif;
+    --font-secondary: 'Futura PT Medium', sans-serif;
 }
 
 .site-body {
