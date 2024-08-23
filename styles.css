@@ -1,3 +1,24 @@
+@font-face {
+    font-family: Wigrum-medium;
+    src: url('./fonts/Wigrum-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: Wigrum-regular;
+    src: url('./fonts/Wigrum-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: Wigrum-bold;
+    src: url('./fonts/Wigrum-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: Wigrum-light;
+    src: url('./fonts/Wigrum-Light.otf') format('truetype');
+}
+
+
 :root {
     --primary-color: #e54a35;
     --text-color: #081b33;
@@ -9,9 +30,9 @@
     --theme-toggle-hover: #ffffff73;
     --theme-toggle-border: #d8d8d8;
     --header-background: #ffffff;
-    --font-primary: 'calluna', serif;
-    --font-semibold: 'calluna', serif;
-    --font-secondary: 'futura-pt', sans-serif;
+    --font-primary: Wigrum-regular;
+    --font-semibold: Wigrum-medium;
+    --font-secondary: Wigrum-medium;
     --divider: #bbb;
 }
 
