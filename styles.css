@@ -208,12 +208,6 @@
     margin: 24px 0;
 }
 
-.navigation-link {
-    font-size: 24px;
-    color: var(--text-color);;
-    text-decoration: none;
-}
-
 .close-btn {
     position: absolute;
     top: 20px;
