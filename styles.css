@@ -36,14 +36,15 @@
     background-color: var(--background-color);
     font-family: var(--font-primary);
     color: var(--text-color);
-    margin: 0px 115px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.site-header, .site-footer {
+.site-header {
     width: 100%;
     max-width: 1200px;
     padding: 68px 20px;
@@ -147,14 +148,104 @@
     color: var(--text-color);
 }
 
+/* General styles for the footer */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 68px 0px;
+    background-color: #f1f1f1; /* Optional: background color for the footer */
+    text-align: center; /* Center text alignment by default */
+    align-items: center; /* Center align items by default */
+}
+
+/* Style the footer links */
+.footer-link {
+    color: var(--primary-color); /* Orange color for links */
+    text-decoration: none;
+    margin: 8px 0; /* Space between links */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Media query for screens 992px and up */
+@media (min-width: 992px) {
+    .site-footer {
+        text-align: left; /* Align text to the left */
+        align-items: flex-start; /* Align items to the start (left) */
+        justify-content: flex-start; /* Align the content to the left */
+    }
+}
+
 /* Media Query to show hamburger menu on small screens */
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
+    .site-body {
+        margin: 0px 115px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .email, .email-link {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+        gap: 24px; /* Add 24px gap between all child elements */
+    }
+    
     .menu-button {
         display: flex; /* Show the menu button on small screens */
     }
 
+    .email {
+        display: none;
+    }
+
     .navigation-menu {
         display: none; /* Hide the navigation links on small screens */
+    }
+}
+
+/* Ensure email is 16px font size between 768px to 320px */
+@media (max-width: 768px) and (min-width: 320px) {
+    .site-body {
+        margin: 0px 48px;
+    }
+
+    .email {
+        display: none;
+    }
+}
+
+@media (max-width: 574px) and (min-width: 320px) {
+    .site-title {
+        display: block;
+        font-size: 24px; /* Enforcing 16px font size */
+    }
+}
+
+@media (max-width: 447px) and (min-width: 320px) {
+    .site-title {
+        display: block;
+        font-size: 24px; /* Enforcing 16px font size */
+    }
+
+    .site-body {
+        margin: 0px 16px;
+    }
+}
+
+@media (max-width: 400px) and (min-width: 320px) {
+    .site-title {
+        display: block;
+        font-size: 18px; /* Enforcing 16px font size */
     }
 }
 
