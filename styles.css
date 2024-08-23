@@ -143,6 +143,9 @@
 
 .footer-navigation {
     text-align: center;
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
 .contact-email {
