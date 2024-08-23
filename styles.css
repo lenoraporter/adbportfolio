@@ -1,42 +1,17 @@
-/* Include Calluna Regular Font */
-@font-face {
-    font-family: 'Calluna';
-    src: url('./fonts/Calluna-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Include Calluna Semibold Font */
-@font-face {
-    font-family: 'Calluna Semibold';
-    src: url('./fonts/Calluna-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-/* Include ParaType Futura PT Medium Font */
-@font-face {
-    font-family: 'Futura PT Medium';
-    src: url('./fonts/ParaType-Futura-PT-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-
 :root {
     --primary-color: #e54a35;
     --text-color: #081b33;
     --text-heading-color: #04101f;
     --overlay-text: #081b33;
     --background-color: #f2f2f2;
-    --link-color: #081b33;
+    --link-color: #e54a35;
     --theme-toggle: #ffffff1a;
     --theme-toggle-hover: #ffffff73;
     --theme-toggle-border: #d8d8d8;
     --header-background: #ffffff;
-    --font-primary: 'Calluna', sans-serif;
-    --font-semibold: 'Calluna Semibold', sans-serif;
-    --font-secondary: 'Futura PT Medium', sans-serif;
+    --font-primary: 'calluna', serif;
+    --font-semibold: 'calluna', serif;
+    --font-secondary: 'futura-pt', sans-serif;
     --divider: #bbb;
 }
 
@@ -148,17 +123,25 @@ a {
 
 .email-link {
     font-family: var(--font-secondary);
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
     color: var(--primary-color);
+}
+
+.email-link:hover {
+    color: var(--text-color)
 }
 
 .site-title-link {
     font-family: var(--font-secondary);
     font-size: 34px;
-    font-weight: 600;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.34px;
     text-decoration: none;
+    cursor: pointer;
     color: var(--text-color);
 }
 
@@ -173,6 +156,7 @@ a {
     font-family: var(--font-secondary);
     font-size: 16px;
     font-weight: 500;
+    letter-spacing: 0.63px;
 }
 
 .main-content {
@@ -187,6 +171,11 @@ a {
 
 .intro-text, .writing-description {
     font-size: 28px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.4em;
+    letter-spacing: -.01em;
+    text-transform: none;   
     margin-bottom: 15px;
     line-height: 37.8px;
 }
