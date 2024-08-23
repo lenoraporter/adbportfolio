@@ -53,6 +53,12 @@
     align-items: center;
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -73,6 +79,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    cursor: pointer;
 }
 
 .menu-icon-line {
@@ -155,6 +162,71 @@
     color: var(--text-color);
 }
 
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    color: white;
+    font-family: var(--font-secondary);
+}
+
+.overlay .content {
+    padding: 0px 56px;
+}
+
+.overlay.show {
+    display: flex;
+    height: 100%;
+}
+
+.overlay-title {
+    font-size: 36px;
+    margin-bottom: 56px;
+}
+
+.overlay-title-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600; 
+    font-size: 32px;
+}
+
+.navigation-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-links li {
+    margin: 24px 0;
+}
+
+.navigation-link {
+    font-size: 24px;
+    color: var(--text-color);;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.navigation-links li {
+    list-style: none;
+}
+
 /* General styles for the footer */
 .site-footer {
     display: flex;
@@ -222,6 +294,10 @@
 
 /* Ensure email is 16px font size between 768px to 320px */
 @media (max-width: 768px) and (min-width: 320px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
     .site-body {
         margin: 0px 48px;
     }

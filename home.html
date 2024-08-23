@@ -44,6 +44,22 @@
             <p class="writing-description">I write weekly about the intersection of engineering leadership and mindfulness, sharing insights on leading teams and personal growth.</p>
             <p class="writing-description">You can also find my thoughts on <a href="https://medium.com/@aliciadonovanbrainerd" class="medium-link">Medium</a>, where I explore the evolving tech landscape and mindful leadership.</p>
         </section>
+        
+        <!-- Overlay for the navigation menu -->
+        <div class="overlay" id="navOverlay">
+            <div class="close-btn" id="closeBtn">×</div>
+            <div class="content">
+                <h1 class="overlay-title">
+                    <a href="home.html" class="overlay-title-link">Alicia Donovan Brainerd</a>
+                </h1>
+                <ul class="navigation-links">
+                    <li><a href="home.html" class="navigation-link">Home</a></li>
+                    <li><a href="about.html" class="navigation-link">About</a></li>
+                    <li><a href="testimonials.html" class="navigation-link">Testimonials</a></li>
+                    <li><a href="contact.html" class="navigation-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <hr class="content-divider">
@@ -57,6 +73,7 @@
         </nav>
         <div class="contact-email">aliciadonovanbrainerd@gmail.com</div>
     </footer>
+    
     <script>
         // Get the current page URL
         const currentUrl = window.location.pathname.split('/').pop();
@@ -71,6 +88,21 @@
                 link.classList.add('active');
             }
         });
+
+        // Toggle the overlay
+        const hamburgerMenu = document.querySelector('.menu-button');
+        const overlay = document.getElementById('navOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        hamburgerMenu.addEventListener('click', () => {
+            overlay.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('show');
+        });
     </script>
 </body>
 </html>
+
+

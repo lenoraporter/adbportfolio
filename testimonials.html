@@ -46,6 +46,7 @@
         </nav>
         <div class="contact-email">aliciadonovanbrainerd@gmail.com</div>
     </footer>
+    
     <script>
         // Get the current page URL
         const currentUrl = window.location.pathname.split('/').pop();
@@ -59,6 +60,19 @@
             if (linkPath === currentUrl) {
                 link.classList.add('active');
             }
+        });
+
+        // Toggle the overlay
+        const hamburgerMenu = document.querySelector('.menu-button');
+        const overlay = document.getElementById('navOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        hamburgerMenu.addEventListener('click', () => {
+            overlay.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('show');
         });
     </script>
 </body>
