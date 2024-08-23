@@ -23,7 +23,7 @@
                 <div class="site-title">ALICIA DONOVAN BRAINERD</div>
             </a>
             <nav class="navigation-menu">
-                <a href="#" class="navigation-link">Home</a>
+                <a href="home.html" class="navigation-link">Home</a>
                 <a href="#" class="navigation-link">About</a>
                 <a href="#" class="navigation-link">Media</a>
                 <a href="#" class="navigation-link">Testimonials</a>
@@ -51,12 +51,27 @@
 
     <footer class="site-footer">
         <nav class="footer-navigation">
-            <a href="#" class="footer-link">Home</a> |
+            <a href="home.html" class="footer-link">Home</a> |
             <a href="#" class="footer-link">About</a> |
             <a href="#" class="footer-link">Writing</a> |
             <a href="#" class="footer-link">Contact</a>
         </nav>
         <div class="contact-email">aliciadonovanbrainerd@gmail.com</div>
     </footer>
+    <script>
+        // Get the current page URL
+        const currentUrl = window.location.pathname.split('/').pop();
+
+        // Get all the nav links
+        const navLinks = document.querySelectorAll('.navigation-link');
+
+        // Loop through each link and check if it matches the current URL
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (linkPath === currentUrl) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -65,6 +65,10 @@
     align-items: center;
 }
 
+.navigation-menu .navigation-link.active {
+    color: var(--primary-color); /* Orange color for active link */
+}
+
 .menu-icon {
     display: flex;
     flex-direction: column;
