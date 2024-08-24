@@ -163,7 +163,7 @@ a {
     letter-spacing: 0.34px;
     text-decoration: none;
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--text-heading-color);
 }
 
 .navigation-menu {
@@ -353,26 +353,17 @@ a {
     .main-content {
         padding:0px 20px;
     }
-    
-    .menu-button {
-        display: flex; /* Show the menu button on small screens */
-    }
 
     .email {
         display: none;
     }
 
-    .navigation-menu {
-        display: none; /* Hide the navigation links on small screens */
-    }
-
     .site-title {
-        font-size: 24px; /* Enforcing 16px font size */
+        font-size: 24px;
     }
 }
 
-/* Ensure email is 16px font size between 768px to 320px */
-@media (max-width: 768px) and (min-width: 320px) {
+@media (max-width: 768px) {
     .hamburger-menu {
         display: block;
     }
@@ -381,29 +372,37 @@ a {
         margin: 0px 48px;
     }
 
+    .navigation-menu {
+        display: none; /* Hide the navigation links on small screens */
+    }
+
     .email {
         display: none;
+    }
+
+    .menu-button {
+        display: flex; /* Show the menu button on small screens */
     }
 }
 
 @media (max-width: 635px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 20px; /* Enforcing 16px font size */
+        font-size: 20px;
     }
 }
 
 @media (max-width: 508px) and (min-width: 447px) {
     .site-title {
         display: block;
-        font-size: 16px; /* Enforcing 16px font size */
+        font-size: 16px;
     }
 }
 
 @media (max-width: 447px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 16px; /* Enforcing 16px font size */
+        font-size: 16px;
     }
 
     .site-body {
@@ -414,7 +413,7 @@ a {
 @media (max-width: 400px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 16px; /* Enforcing 16px font size */
+        font-size: 16px;
     }
 }
 
