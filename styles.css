@@ -191,7 +191,7 @@ a {
 }
 
 .intro-text, .writing-description {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 300;
     font-style: normal;
     line-height: 1.4em;
@@ -241,13 +241,14 @@ a {
     left: 0;
     z-index: 1000;
     display: none;
-    flex-direction: column;
     color: var(--text-color);
     font-family: var(--font-secondary);
 }
 
 .overlay .content {
-    padding: 0px 56px;
+    padding: 68px 48px;
+    width: 100%;
+    text-align: center;
 }
 
 .overlay.show {
@@ -256,12 +257,6 @@ a {
 
 }
 
-.overlay-title-link {
-    font-size: 36px;
-    margin-bottom: 56px;
-    text-decoration: none;
-    color: var(--text-heading-color);
-}
 
 [data-theme="dark"] .overlay-title-link {
     color: var(--text-heading-color);
@@ -281,9 +276,7 @@ a {
 }
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    display: flex;
     font-size: 40px;
     cursor: pointer;
     color: var(--text-heading-color);
@@ -324,11 +317,15 @@ a {
 }
 
 /* Media query for screens 992px and up */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     .site-footer {
         text-align: left; /* Align text to the left */
         align-items: flex-start; /* Align items to the start (left) */
         justify-content: flex-start; /* Align the content to the left */
+    }
+
+    .main-content {
+        padding: 0px 20px;
     }
 }
 
@@ -352,6 +349,10 @@ a {
         justify-content: normal;
         gap: 24px; /* Add 24px gap between all child elements */
     }
+
+    .main-content {
+        padding:0px 20px;
+    }
     
     .menu-button {
         display: flex; /* Show the menu button on small screens */
@@ -363,6 +364,10 @@ a {
 
     .navigation-menu {
         display: none; /* Hide the navigation links on small screens */
+    }
+
+    .site-title {
+        font-size: 24px; /* Enforcing 16px font size */
     }
 }
 
@@ -384,21 +389,21 @@ a {
 @media (max-width: 635px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 24px; /* Enforcing 16px font size */
+        font-size: 20px; /* Enforcing 16px font size */
     }
 }
 
 @media (max-width: 508px) and (min-width: 447px) {
     .site-title {
         display: block;
-        font-size: 20px; /* Enforcing 16px font size */
+        font-size: 16px; /* Enforcing 16px font size */
     }
 }
 
 @media (max-width: 447px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 20px; /* Enforcing 16px font size */
+        font-size: 16px; /* Enforcing 16px font size */
     }
 
     .site-body {
@@ -409,7 +414,7 @@ a {
 @media (max-width: 400px) and (min-width: 320px) {
     .site-title {
         display: block;
-        font-size: 18px; /* Enforcing 16px font size */
+        font-size: 16px; /* Enforcing 16px font size */
     }
 }
 
