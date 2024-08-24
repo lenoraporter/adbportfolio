@@ -1,3 +1,4 @@
+/* Font Faces */
 @font-face {
     font-family: Wigrum-medium;
     src: url('./fonts/Wigrum-Medium.otf') format('truetype');
@@ -18,7 +19,7 @@
     src: url('./fonts/Wigrum-Light.otf') format('truetype');
 }
 
-
+/* Root Variables */
 :root {
     --primary-color: #e54a35;
     --text-color: #081b33;
@@ -31,11 +32,11 @@
     --theme-toggle-border: #d8d8d8;
     --header-background: #ffffff;
     --font-primary: Wigrum-regular;
-    --font-semibold: Wigrum-medium;
     --font-secondary: Wigrum-medium;
     --divider: #bbb;
 }
 
+/* Dark Theme Variables */
 [data-theme="dark"] {
     --primary-color: #ff715e;
     --text-color: #cccccc;
@@ -51,6 +52,7 @@
     /* Add more dark theme specific variables as needed */
 }
 
+/* Global Styles */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -65,12 +67,7 @@ a {
     color: var(--overlay-text);
 }
 
-/* Additional elements to style using the theme variables */
-.header-container, .footer-container {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
+/* Theme Toggle */
 .theme-toggle {
     background: var(--theme-toggle);
     border: none;
@@ -85,6 +82,7 @@ a {
     background-color: var(--theme-toggle-hover);
 }
 
+/* Site Body */
 .site-body {
     background-color: var(--background-color);
     font-family: var(--font-primary);
@@ -97,6 +95,7 @@ a {
     align-items: center;
 }
 
+/* Header */
 .site-header {
     width: 100%;
     max-width: 1200px;
@@ -106,10 +105,15 @@ a {
     align-items: center;
 }
 
-.hamburger-menu {
-    display: none;
-    font-size: 24px;
+.site-title-link {
+    font-family: var(--font-secondary);
+    font-size: 34px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.34px;
+    text-decoration: none;
     cursor: pointer;
+    color: var(--text-heading-color);
 }
 
 .header-container {
@@ -122,12 +126,8 @@ a {
 .menu-button {
     display: none; /* Hide by default */
     align-items: center;
+    cursor: pointer;
 }
-
-.navigation-menu .navigation-link.active {
-    color: var(--primary-color); /* Orange color for active link */
-}
-
 
 .menu-icon {
     display: flex;
@@ -142,28 +142,9 @@ a {
     background-color: var(--text-color);
 }
 
-.email-link {
-    font-family: var(--font-secondary);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-.email-link:hover {
-    color: var(--text-color)
-}
-
-.site-title-link {
-    font-family: var(--font-secondary);
-    font-size: 34px;
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 0.34px;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--text-heading-color);
+/* Navigation Menu */
+.navigation-menu .navigation-link.active {
+    color: var(--primary-color); /* Orange color for active link */
 }
 
 .navigation-menu {
@@ -180,6 +161,7 @@ a {
     letter-spacing: 0.63px;
 }
 
+/* Main Content */
 .main-content {
     width: 100%;
     max-width: 1200px;
@@ -217,6 +199,7 @@ a {
     margin: 40px 0;
 }
 
+/* Footer */
 .footer-navigation {
     text-align: center;
     display: flex;
@@ -224,11 +207,23 @@ a {
     align-items: center;
 }
 
-.contact-email {
-    font-family: var(--font-secondary);
-    font-size: 16px;
-    margin-top: 20px;
-    color: var(--text-color);
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 68px 0px;
+    text-align: center; /* Center text alignment by default */
+    align-items: center; /* Center align items by default */
+}
+
+.footer-link {
+    color: var(--primary-color); /* Orange color for links */
+    text-decoration: none;
+    margin: 8px 0; /* Space between links */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
 }
 
 /* Overlay styles */
@@ -286,37 +281,9 @@ a {
     list-style: none;
 }
 
-/* General styles for the footer */
-.site-footer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 68px 0px;
-    text-align: center; /* Center text alignment by default */
-    align-items: center; /* Center align items by default */
-}
 
-/* Style the footer links */
-.footer-link {
-    color: var(--primary-color); /* Orange color for links */
-    text-decoration: none;
-    margin: 8px 0; /* Space between links */
-}
-
-.footer-link:hover {
-    text-decoration: underline; /* Optional: underline on hover */
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #1e1e1e;
-        --text-color: #f5f5f5;
-        --link-color: #ff4500;
-        --overlay-background-color: #333333;
-    }
-}
-
-/* Media query for screens 992px and up */
+/* Responsive Styles */
+/* General Adjustments for Different Screen Sizes */
 @media (max-width: 992px) {
     .site-footer {
         text-align: left; /* Align text to the left */
@@ -329,16 +296,9 @@ a {
     }
 }
 
-/* Media Query to show hamburger menu on small screens */
 @media (max-width: 1440px) {
     .site-body {
         margin: 0px 115px;
-    }
-}
-
-@media (max-width: 1380px) {
-    .email, .email-link {
-        display: none;
     }
 }
 
@@ -347,15 +307,11 @@ a {
         display: flex;
         align-items: center;
         justify-content: normal;
-        gap: 24px; /* Add 24px gap between all child elements */
+        gap: 24px; 
     }
 
     .main-content {
         padding:0px 20px;
-    }
-
-    .email {
-        display: none;
     }
 
     .site-title {
@@ -373,15 +329,11 @@ a {
     }
 
     .navigation-menu {
-        display: none; /* Hide the navigation links on small screens */
-    }
-
-    .email {
         display: none;
     }
 
     .menu-button {
-        display: flex; /* Show the menu button on small screens */
+        display: flex;
     }
 }
 
